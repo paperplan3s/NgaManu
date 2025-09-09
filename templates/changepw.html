@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+
+<form class="form" action="/changepw" method="post">
+        <fieldset>
+            <legend>🔐 Change your password. </legend>
+                <div class="mb-3">
+                    <input class="form-control mx-auto w-auto" id="password1" name="password1" placeholder="Old Password" type="password">
+                </div>
+                <div class="mb-3">
+                    <input class="form-control mx-auto w-auto" id="password2" name="password2" placeholder="New Password" type="password">
+                </div>
+                <button class="btn btn-primary" type="submit">Change</button>
+            </form>
+    </fieldset>
+    </form>
+{% endblock %}

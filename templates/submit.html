@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Submit
+{% endblock %}
+
+{% block main %}
+<form class = "form" action = "/submit" method = "post">
+    <fieldset>
+        <legend>🔭 Submit a Rare Bird Sighting: </legend>
+    <label for="bird">Bird</label>
+    <select id="bird" name="bird" required>
+        <option disabled selected>Bird Species</option>
+      <option value="Bellbird">Bellbird</option>
+      <option value="Hihi">Hihi</option>
+      <option value="Kakariki">Kakariki</option>
+      <option value="Kea">Kea</option>
+      <option value="Kokako">Kokako</option>
+      <option value="North Island Kiwi">North Island Kiwi</option>
+      <option value="Little Spotted Kiwi">Little Spotted Kiwi</option>
+      <option value="Hihi">Hihi</option>
+      <option value="Yellow-Eyed Penguin">Yellow-Eyed Penguin</option>
+      <option value="Whio">Whio (Blue Duck)</option>
+    </select>
+
+    <label for="count">Count</label>
+    <input type="number" id="count" name="count" placeholder="1"min="1" max="5" required>
+
+    <label for="location">Location</label>
+    <input type="text" id="location" name="location" autocomplete="off" placeholder="Location, Region" required>
+
+
+    <button class="btn btn-primary" type="submit">Submit</button>
+    </fieldset>
+  </form>
+
+<br>
+<br>
+
+<div class="section">
+    <legend> <a href="/visualize">Your Sightings</a>: </legend>
+  <table id = "sightings">
+      <thead>
+          <tr>
+              <th>Bird</th>
+              <th>Count</th>
+              <th>Date</th>
+              <th>Location</th>
+          </tr>
+      </thead>
+      <tbody>
+          {% for row in database %}
+          <tr>
+              <td> {{row.bird}}</td>
+              <td> {{row.count}}</td>
+              <td> {{row.date}}</td>
+              <td> {{row.location}}</td>
+          </tr>
+          {% endfor %}
+      </tbody>
+  </table>
+</div>
+<br>
+<br>
+<p> 🗺️ See a <a href="/visualize">map</a> of your sightings.</p>
+<p> 🔐 <a href="/changepw">Change</a> your password.</p>
+{% endblock %}

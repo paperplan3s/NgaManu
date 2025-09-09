@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>{% block title %}{% endblock %}</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Alata' rel='stylesheet'>
+<head>
+<link href="/static/styles.css" rel="stylesheet">
+</head>
+</head>
+<body>
+
+<div class="sidenav">
+  <a href="/">Home</a>
+  <a href="/kokako_sightings">Kōkako</a>
+  <a href="/kea_sightings">Kea</a>
+  <a href="/penguin_sightings">Yellow-Eyed Penguin</a>
+  <a href="/hihi_sightings">Hihi</a>
+  <a href="/skiwi_sightings">Little Spotted Kiwi</a>
+  <a href="/kakariki_sightings">Kākāriki</a>
+  <a href="/bellbird_sightings">Bellbird</a>
+  <a href="/nbkiwi_sightings">North Island Kiwi</a>
+  <a href="/whio_sightings">Whio</a>
+  <a href="/map">Notable Sightings</a>
+  <a href="/custom_search">Custom Search</a>
+  <a href="/login">My Sightings</a>
+</div>
+
+<div class="content">
+  <h2>Ngā Manu</h2>
+
+  <p>  {% block main %}{% endblock %} </p>
+
+  <div class="row">
+    <a href="/kokako_sightings"><img class="column" src="static/images/kokako.jpg" title = "Kōkako Sightings"> </a>
+    <a href="/kea_sightings"><img class="column" src="static/images/kea.jpg" title = "Kea Sightings"></a>
+    <a href="/penguin_sightings"><img class="column"src="static/images/penguin.jpg" title = "Yellow-Eyed Penguin (Hoiho) Sightings"></a>
+  </div>
+  <div class="row">
+    <a href="/hihi_sightings"><img class="column" src="static/images/hihi.jpg" title = "Hihi (Stitchbird) Sightings"></a>
+    <a href="/skiwi_sightings"><img class="column" src="static/images/kiwi.jpg" title = "Little Spotted Kiwi Sightings"></a>
+    <a href="/kakariki_sightings"><img class="column" src="static/images/kakariki.jpg" title = "Kākāriki (Red-Crowned Parakeet) Sightings"></a>
+  </div>
+  <div class="row">
+    <a href= "/bellbird_sightings"><img class="column" src="static/images/bellbird.jpg" title = "Bellbird Sightings"></a>
+    <a href="/nbkiwi_sightings"><img class="column" src="static/images/nkiwi.jpg" title = "North Island Kiwi Sightings"></a>
+    <a href="/whio_sightings"><img class="column" src="static/images/whio.jpg" title = "Whio (Blue Duck) Sightings"></a>
+  </div>
+  <div class="footer">
+        <footer class="mb-5 small text-center text-muted">
+              Data provided by <a href="https://ebird.org/">eBird</a>.
+                </footer>
+  </div>
+</div>
+
+</body>
+</html>

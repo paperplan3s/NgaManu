@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block title %}
+{{ message }}
+{% endblock %}
+{% block main %}
+
+ <p> {{ message }}  </p>
+ <p> Click <a href="/{{ link }}">here </a> to try again. </p>
+{% endblock %}
